@@ -14,9 +14,12 @@ from .conversions import (
     downscale_image_tensor,
     image_tensor_pair_to_batch,
     pil_to_bytesio,
+    resize_mask_to_image,
     tensor_to_base64_string,
     tensor_to_bytesio,
     tensor_to_pil,
+    text_filepath_to_base64_string,
+    text_filepath_to_data_uri,
     trim_video,
     video_to_base64_string,
 )
@@ -33,16 +36,18 @@ from .upload_helpers import (
     upload_video_to_comfyapi,
 )
 from .validation_utils import (
+    get_image_dimensions,
     get_number_of_images,
-    validate_aspect_ratio_closeness,
+    validate_aspect_ratio_string,
     validate_audio_duration,
     validate_container_format_is_mp4,
     validate_image_aspect_ratio,
-    validate_image_aspect_ratio_range,
     validate_image_dimensions,
+    validate_images_aspect_ratio_closeness,
     validate_string,
     validate_video_dimensions,
     validate_video_duration,
+    validate_video_frame_count,
 )
 
 __all__ = [
@@ -70,22 +75,27 @@ __all__ = [
     "downscale_image_tensor",
     "image_tensor_pair_to_batch",
     "pil_to_bytesio",
+    "resize_mask_to_image",
     "tensor_to_base64_string",
     "tensor_to_bytesio",
     "tensor_to_pil",
+    "text_filepath_to_base64_string",
+    "text_filepath_to_data_uri",
     "trim_video",
     "video_to_base64_string",
     # Validation utilities
+    "get_image_dimensions",
     "get_number_of_images",
-    "validate_aspect_ratio_closeness",
+    "validate_aspect_ratio_string",
     "validate_audio_duration",
     "validate_container_format_is_mp4",
     "validate_image_aspect_ratio",
-    "validate_image_aspect_ratio_range",
     "validate_image_dimensions",
+    "validate_images_aspect_ratio_closeness",
     "validate_string",
     "validate_video_dimensions",
     "validate_video_duration",
+    "validate_video_frame_count",
     # Misc functions
     "get_fs_object_size",
 ]
